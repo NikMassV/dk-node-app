@@ -5,3 +5,6 @@ Create image:
 Run container:
 - docker run -p 4200:4200 nodeapp:latest
 - docker run -p 7070:4200 nodeapp:V2.0
+
+Create deployment 
+- kubectl create deployment nodeapp --image=nodeapp
