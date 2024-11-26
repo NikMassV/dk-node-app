@@ -17,4 +17,4 @@ Add expose:
 - kubectl expose deployment nodeapp --type=NodePort --port=4200
 
 Get connection to a service:
-minikube service nodeapp
+- minikube service nodeapp
