@@ -18,3 +18,9 @@ Add expose:
 
 Get connection to a service:
 - minikube service nodeapp
+
+Update app image version:
+- kubectl set image deployment/nodeapp nodeapp=nikmassv/nodeapp:V4.0
+
+Set scaling:
+- kubectl scale deployment nodeapp --replicas=2
