@@ -6,5 +6,15 @@ Run container:
 - docker run -p 4200:4200 nodeapp:latest
 - docker run -p 7070:4200 nodeapp:V2.0
 
-Create deployment 
-- kubectl create deployment nodeapp --image=nodeapp
+Publish to Docker Hub:
+- docker tag nodeapp:latest nikmassv/nodeapp:latest
+- docker push nikmassv/nodeapp:latest
+
+Create deployment:
+- kubectl create deployment nodeapp --image=nikmassv/nodeapp:latest
+
+Add expose:
+- kubectl expose deployment nodeapp --type=NodePort --port=4200
+
+Get connection to a service:
+minikube service nodeapp

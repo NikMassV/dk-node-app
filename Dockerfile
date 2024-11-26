@@ -1,7 +1,7 @@
 # Stage 1: Build
 FROM node:20-bullseye AS build
 WORKDIR /app
-COPY package*.json ./
+COPY . /app
 RUN npm install
 COPY . .
 
