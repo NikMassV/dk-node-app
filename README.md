@@ -27,3 +27,6 @@ Set scaling:
 
 Create deployments via manifest:
 - kubectl apply -f nodeapp-deployment.yaml
+
+Create service via manifest:
+- kubectl apply -f nodeapp-service.yaml
