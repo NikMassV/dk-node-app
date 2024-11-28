@@ -24,3 +24,6 @@ Update app image version:
 
 Set scaling:
 - kubectl scale deployment nodeapp --replicas=2
+
+Create deployments via manifest:
+- kubectl apply -f nodeapp-deployment.yaml
