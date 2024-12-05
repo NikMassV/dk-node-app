@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.send(`
     <html>
       <body>
-        <h1>New version</h1>
+        <h1>New version, Dev</h1>
         <h1>Hello, ${username}!</h1>
         <br/>
         <form action="/set-username" method="POST">
