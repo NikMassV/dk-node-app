@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-deployment-prod
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nodeapp-prod
+      tier: client-prod
+  template:
+    metadata:
+      labels:
+        app: nodeapp-prod
+        tier: client-prod
+    spec:
+      containers:
+        - name: nodeapp-prod
+          image: nikmassv/nodeapp:prod

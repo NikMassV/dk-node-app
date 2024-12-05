@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-deployment-dev
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nodeapp-dev
+      tier: client-dev
+  template:
+    metadata:
+      labels:
+        app: nodeapp-dev
+        tier: client-dev
+    spec:
+      containers:
+        - name: nodeapp-dev
+          image: nikmassv/nodeapp:dev
